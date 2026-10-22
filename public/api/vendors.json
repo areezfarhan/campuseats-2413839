@@ -42,7 +42,7 @@
             {
                 "id": "ami-1",
                 "name": "Nasi Ayam Penyet",
-                "description": "Smashed fried chicken with sambal and rice",
+                "description": "fried chicken with sambal & rice",
                 "price": 9,
                 "category": "Rice",
                 "available": true
