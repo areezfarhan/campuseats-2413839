@@ -1,0 +1,76 @@
+[
+    {
+        "id": "my-restaurant",
+        "name": "The Savory Bakery",
+        "location": "Mahallah Zubair, Block H",
+        "openHours": "10:00 am - 10:00 pm",
+        "isOpen": true,
+        "menu": [
+            {
+                "id": "my-1",
+                "name": "Prawn Sushi Bake",
+                "description": "Comforting deconstructed sushi baked to perfection with juicy prawns, creamy spicy mayo, and seasoned rice.",
+                "price": 7,
+                "category": "sushi",
+                "available": true
+            },
+            {
+                "id": "my-2",
+                "name": "Teriyaki Sushi Bake",
+                "description": "Comforting deconstructed sushi baked to perfection with teriyaki chicken, creamy spicy mayo, and seasoned rice.",
+                "price": 7,
+                "category": "sushi",
+                "available": true
+            },
+            {
+                "id": "my-3",
+                "name": "lemonade",
+                "description": "Freshly squeezed, ice-cold lemonade with the perfect balance of sweet and tart. A refreshing choice for a hot day.",
+                "price": 3,
+                "category": "Drinks",
+                "available": true
+            }
+        ]
+    },
+    {
+        "id": "kafe-aminah",
+        "name": "Kafe Mahallah Aminah",
+        "location": "Mahallah Aminah, Ground Floor",
+        "openHours": "8:00 am - 9:00 pm",
+        "isOpen": true,
+        "menu": [
+            {
+                "id": "ami-1",
+                "name": "Nasi Ayam Penyet",
+                "description": "Smashed fried chicken with sambal and rice",
+                "price": 9,
+                "category": "Rice",
+                "available": true
+            },
+            {
+                "id": "ami-2",
+                "name": "Air Bandung",
+                "description": "Rose syrup with milk",
+                "price": 3,
+                "category": "Drinks",
+                "available": true
+            }
+        ]
+    },
+    {
+        "id": "2416464-kopi-dahlia",
+        "name": "Kopi Dahlia",
+        "location": "Mahallah Asma, Block C",
+        "openHours": "8:00 am - 11:00 pm",
+        "isOpen": true,
+        "menu": [
+            {
+                "id": "2416464-m1",
+                "name": "Teh Tarik",
+                "price": 2.5,
+                "category": "Drinks",
+                "popular": true
+            }
+        ]
+    }
+]
