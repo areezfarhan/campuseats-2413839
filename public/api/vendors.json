@@ -1,76 +1,237 @@
 [
     {
-        "id": "my-restaurant",
+        "id": "2413839-my-restaurant",
         "name": "The Savory Bakery",
         "location": "Mahallah Zubair, Block H",
         "openHours": "10:00 am - 10:00 pm",
         "isOpen": true,
         "menu": [
             {
-                "id": "my-1",
+                "id": "2413839-my-1",
                 "name": "Prawn Sushi Bake",
-                "description": "Comforting deconstructed sushi baked to perfection with juicy prawns, creamy spicy mayo, and seasoned rice.",
+                "description": "Creamy baked sushi with prawns.",
                 "price": 7,
-                "category": "sushi",
+                "category": "Sushi",
                 "available": true
             },
             {
-                "id": "my-2",
+                "id": "2413839-my-2",
                 "name": "Teriyaki Sushi Bake",
-                "description": "Comforting deconstructed sushi baked to perfection with teriyaki chicken, creamy spicy mayo, and seasoned rice.",
+                "description": "Baked sushi with teriyaki chicken.",
                 "price": 7,
-                "category": "sushi",
+                "category": "Sushi",
                 "available": true
             },
             {
-                "id": "my-3",
-                "name": "lemonade",
-                "description": "Freshly squeezed, ice-cold lemonade with the perfect balance of sweet and tart. A refreshing choice for a hot day.",
+                "id": "2413839-my-3",
+                "name": "Lemonade",
+                "description": "Cold, sweet, and tart lemonade.",
                 "price": 3,
                 "category": "Drinks",
+                "available": true
+            },
+            {
+                "id": "2413839-my-4",
+                "name": "Crab Stick Sushi Bake",
+                "description": "Baked sushi with flaky crab.",
+                "price": 6.5,
+                "category": "Sushi",
+                "available": true
+            },
+            {
+                "id": "2413839-my-5",
+                "name": "Iced Matcha Latte",
+                "description": "Iced matcha with fresh milk.",
+                "price": 4.5,
+                "category": "Drinks",
+                "available": true
+            },
+            {
+                "id": "2413839-my-6",
+                "name": "Butter Croissant",
+                "description": "Flaky, golden, buttery French pastry.",
+                "price": 3.5,
+                "category": "Bakery",
+                "available": true
+            },
+            {
+                "id": "2413839-my-7",
+                "name": "Chocolate Muffin",
+                "description": "Moist chocolate muffin with chips.",
+                "price": 4,
+                "category": "Bakery",
+                "available": true
+            },
+            {
+                "id": "2413839-my-8",
+                "name": "Sausage Roll",
+                "description": "Savory sausage in crispy pastry.",
+                "price": 3,
+                "category": "Bakery",
                 "available": true
             }
         ]
     },
     {
-        "id": "kafe-aminah",
-        "name": "Kafe Mahallah Aminah",
-        "location": "Mahallah Aminah, Ground Floor",
-        "openHours": "8:00 am - 9:00 pm",
+        "id": "2415599-kafe-zubair",
+        "name": "Kafe Mahallah Zubair",
+        "location": "Mahallah Zubair, Block Kafe",
+        "openHours": "7:00 am - 10:00 pm",
         "isOpen": true,
         "menu": [
             {
-                "id": "ami-1",
-                "name": "Nasi Ayam Penyet",
-                "description": "fried chicken with sambal & rice",
-                "price": 9,
+                "id": "2415599-m1",
+                "name": "Nasi Ayam Bangla",
+                "description": "Murah dan sedap",
+                "price": 5.0,
                 "category": "Rice",
+                "popular": true,
                 "available": true
             },
             {
-                "id": "ami-2",
-                "name": "Air Bandung",
-                "description": "Rose syrup with milk",
-                "price": 3,
-                "category": "Drinks",
+                "id": "2415599-m2",
+                "name": "Chicken Wrap Abangku",
+                "description": "Kenyang dan sedap",
+                "price": 6.0,
+                "category": "Wraps",
+                "popular": false,
                 "available": true
-            }
-        ]
-    },
-    {
-        "id": "2416464-kopi-dahlia",
-        "name": "Kopi Dahlia",
-        "location": "Mahallah Asma, Block C",
-        "openHours": "8:00 am - 11:00 pm",
-        "isOpen": true,
-        "menu": [
+            },
             {
-                "id": "2416464-m1",
+                "id": "2415599-m3",
+                "name": "Shawarma Zubair",
+                "description": "Viva shawarma delicioso",
+                "price": 6.0,
+                "category": "Wraps",
+                "popular": true,
+                "available": false
+            },
+            {
+                "id": "2415599-m4",
                 "name": "Teh Tarik",
+                "description": "Hot and frothy",
                 "price": 2.5,
                 "category": "Drinks",
-                "popular": true
+                "popular": true,
+                "available": true
+            },
+            {
+                "id": "2415599-m5",
+                "name": "Milo Ais",
+                "description": "Cold and chocolatey",
+                "price": 3.0,
+                "category": "Drinks",
+                "popular": false,
+                "available": true
+            },
+            {
+                "id": "2415599-m6",
+                "name": "Mee Goreng Mamak",
+                "description": "Spicy fried noodles",
+                "price": 5.5,
+                "category": "Rice",
+                "popular": false,
+                "available": true
+            },
+            {
+                "id": "2415599-m7",
+                "name": "Nasi Lemak Biasa",
+                "description": "Sambal, egg and anchovies",
+                "price": 4.0,
+                "category": "Rice",
+                "popular": true,
+                "available": true
+            },
+            {
+                "id": "2415599-m8",
+                "name": "Sirap Bandung",
+                "description": "Rose syrup with milk",
+                "price": 2.5,
+                "category": "Drinks",
+                "popular": false,
+                "available": true
             }
         ]
+    },
+    {
+      "id": "2414551-kafe-asma",
+      "name": "Kafe Mahallah Asma",
+      "location": "Mahallah Asma, Ground Floor",
+      "openHours": "7:00 am - 10:00 pm",
+      "isOpen": true,
+      "menu": [
+        {
+          "id": "2414551-my-1",
+          "name": "Nasi Ayam Gepuk",
+          "description": "Fried chicken with sambal and rice",
+          "price": 7.5,
+          "category": "Rice",
+          "popular": true,
+          "available": true
+        },
+        {
+          "id": "2414551-my-2",
+          "name": "Nasi Goreng Kampung",
+          "description": "Traditional village-style fried rice",
+          "price": 6.5,
+          "category": "Rice",
+          "popular": true,
+          "available": true
+        },
+        {
+          "id": "2414551-my-3",
+          "name": "Korean Ramen Spicy Noodles",
+          "description": "Spicy ramen noodles with various toppings",
+          "price": 6.0,
+          "category": "Noodles",
+          "popular": false,
+          "available": true
+        },
+        {
+          "id": "2414551-my-4",
+          "name": "Mee Goreng Mamak",
+          "description": "Spiced yellow noodles stir-fried",
+          "price": 6.0,
+          "category": "Noodles",
+          "popular": true,
+          "available": true
+        },
+        {
+          "id": "2414551-my-5",
+          "name": "Teh Tarik",
+          "description": "Pulled milk tea",
+          "price": 2.5,
+          "category": "Drinks",
+          "popular": true,
+          "available": true
+        },
+        {
+          "id": "2414551-my-6",
+          "name": "Milo Ais",
+          "description": "Milo with ice",
+          "price": 2.8,
+          "category": "Drinks",
+          "popular": false,
+          "available": false
+        },
+        {
+          "id": "2414551-my-7",
+          "name": "French Fries",
+          "description": "Crispy salted potato fries",
+          "price": 4.0,
+          "category": "Sides",
+          "popular": false,
+          "available": true
+        },
+        {
+          "id": "2414551-my-8",
+          "name": "Cucur Badak",
+          "description": "Sweet potato fritters with spicy coconut filling",
+          "price": 2.0,
+          "category": "Sides",
+          "popular": true,
+          "available": true
+        }
+      ]
     }
 ]
