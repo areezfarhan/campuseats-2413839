@@ -13,12 +13,14 @@ function App() {
   const [vendors, setVendors] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-  const [reloadKey, setReloadKey] = useState(0) 
+  const [reloadKey, setReloadKey] = useState(0)
 
   const [selectedVendorId, setSelectedVendorId] = useState(null)
-  const [cart, setCart] = useState([]) 
-  const [view, setView] = useState('menu') 
+  const [cart, setCart] = useState([])
+  const [view, setView] = useState('menu')
   const [lastOrder, setLastOrder] = useState(null)
+
+  const [recentlyViewed, setRecentlyViewed] = useState([])
 
   // --- S2. The fetch effect ---
   useEffect(() => {
@@ -47,6 +49,11 @@ function App() {
     return () => controller.abort()
   }, [reloadKey])
 
+  // NEW: Function to clear the list
+  function handleClearRecent() {
+    setRecentlyViewed([])
+  }
+
   // --- S3. The cart handlers ---
   function handleAddToCart(item) {
     setCart((prev) => {
@@ -57,6 +64,16 @@ function App() {
         )
       }
       return [...prev, { item, qty: 1 }]
+    })
+
+    // 2. NEW: Recently Viewed Logic
+    setRecentlyViewed((prev) => {
+      // Remove the item if it already exists (No duplicates)
+      const filtered = prev.filter((viewedItem) => viewedItem.id !== item.id)
+      // Add it to the very front (Newest first)
+      const updated = [item, ...filtered]
+      // Keep only the first 5 items (Max 5)
+      return updated.slice(0, 5)
     })
   }
 
@@ -90,11 +107,11 @@ function App() {
   let content
   if (view === 'cart') {
     content = (
-      <CartPage 
-        cart={cart} 
-        onChangeQty={handleChangeQty} 
-        onRemove={handleRemove} 
-        onPlaceOrder={handlePlaceOrder} 
+      <CartPage
+        cart={cart}
+        onChangeQty={handleChangeQty}
+        onRemove={handleRemove}
+        onPlaceOrder={handlePlaceOrder}
       />
     )
   } else if (view === 'done') {
@@ -114,6 +131,23 @@ function App() {
     // Your original Week 2 layout goes here
     content = (
       <>
+        {/* NEW: Recently Viewed Section */}
+        {recentlyViewed.length > 0 && (
+          <section>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <h2 className="section-title">Recently Viewed</h2>
+              <button type="button" className="link danger" onClick={handleClearRecent}>Clear</button>
+            </div>
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              {recentlyViewed.map((item) => (
+                <div key={item.id} className="card" style={{ padding: '1rem', flex: '1 1 150px' }}>
+                  <p style={{ fontWeight: 'bold', margin: '0 0 0.5rem 0' }}>{item.name}</p>
+                  <p className="muted" style={{ margin: 0 }}>RM{item.price.toFixed(2)}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
         <section>
           <h2 className="section-title">Choose a vendor</h2>
           <div className="vendor-grid">
@@ -139,10 +173,10 @@ function App() {
 
   return (
     <>
-      <Header 
-        cartCount={cartCount} 
-        onShowMenu={() => setView('menu')} 
-        onShowCart={() => setView('cart')} 
+      <Header
+        cartCount={cartCount}
+        onShowMenu={() => setView('menu')}
+        onShowCart={() => setView('cart')}
       />
       <main className="container">{content}</main>
       <Footer />
